@@ -1,0 +1,1183 @@
+@charset "utf-8";
+
+
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700');
+@import url('https://fonts.googleapis.com/css?family=Eagle+Lake');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,600,600i,700,700i,800');
+/* Other Imported CSS */
+
+@import "../css/font-awesome.min.css";
+@import "../css/icofont.css";
+@import "../css/animations.css";
+@import "../css/slick.css";
+@import "../css/slick-theme.css";
+@import "../css/featherlight.gallery.min.css";
+@import "../css/featherlight.min.css";
+@import "../css/portfolio.css";
+@import "../css/animated-text.css";
+@import "../css/xfilterlist.css";
+/*---///---///---///---///---///---///---///---///---///---
+    02. General CSS 
+---///---///---///---///---///---///---///---///---///---*/
+
+body {
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #2f2d2d;
+}
+
+/* Common CSS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+    color: #111111;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5px;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    max-width:100%;
+    height:100%;
+}
+
+/* Form CSS */
+
+.form-control {
+    height: 40px;
+    margin-bottom: 30px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    
+}
+
+.form-control:focus {
+    border-color: #CC935C;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+::-webkit-input-placeholder {
+    color: #676767 !important;
+}
+
+::-moz-placeholder {
+    color: #676767 !important;
+}
+
+::-o-placeholder {
+    color: #676767 !important;
+}
+
+:-ms-input-placeholder {
+    color: #676767 !important;
+}
+
+input:-moz-placeholder {
+    color: #676767 !important;
+}
+
+.section-default {
+    padding: 120px 0 90px;
+}
+
+.col-default {
+    margin-bottom: 30px;
+}
+
+/* Btn CSS */
+
+.simple-btn {
+    padding: 12px 30px;
+    border-radius: 0;
+    border: none;
+    background: #F4A460;
+    color: #ffffff;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.simple-btn:hover {
+    color: #ffffff;
+    background: #111111;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Background Over Layer CSS */
+
+.over-layer-black {
+    position: relative;
+}
+
+.over-layer-black:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.over-layer-white {
+    position: relative;
+}
+
+.over-layer-white:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Default Title CSS */
+
+.default-title {
+    margin-bottom: 60px;
+}
+
+.default-title h2 {
+    font-family: 'Eagle Lake', cursive;
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.default-title h2 span {
+    color: #F4A460;
+}
+
+.default-title p {
+    letter-spacing: 1px;
+}
+
+/* Preloader CSS */
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #ffffff url('../images/preloader.gif') no-repeat center center;
+}
+
+/* Scrollup CSS */
+
+.goto-top-section {
+    background: #dddddd;
+    position: relative;
+    height: 3px;
+}
+
+.triangle {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    margin-left: -35px;
+    width: 0;
+    height: 0;
+    border-right: 35px solid transparent;
+    border-left: 35px solid transparent;
+    border-bottom: 35px solid #dddddd;
+    text-align: center;
+}
+
+.goto-top-section i {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -10px;
+    color: #F4A460;
+    font-size: 30px;
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    03. Header CSS 
+---///---///---///---///---///---///---///---///---///---*/
+
+.main-header {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.main-nav {
+    border-bottom: none;
+    background: transparent;
+    border-top: 3px solid #F4A460;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-nav .navbar-nav {
+    text-align: right;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.top-nav-collapse {
+    background: #ffffff;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.top-nav-collapse .navbar-nav {
+    text-align: center;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-nav .navbar-nav>li {
+    float: none;
+    display: inline-block;
+}
+
+.main-nav.top-nav-collapse {
+    background: #ffffff;
+    -webkit-box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.6);
+}
+
+.main-nav .navbar-brand {
+    padding: 0;
+    margin-left: 0 !important;
+}
+
+.main-nav .navbar-brand>img{
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-nav .navbar-nav>li>a {
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px 0;
+    margin-top: 5px;
+    margin-left: 22px;
+    letter-spacing: 1px;
+}
+
+.main-nav.top-nav-collapse .navbar-nav>li>a {
+    color: #111111;
+}
+
+.main-nav .navbar-nav>li>a:hover {
+    color: #F4A460;
+}
+
+.main-nav .navbar-nav>.active>a,
+.main-nav .navbar-nav>.active>a:focus,
+.main-nav .navbar-nav>.active>a:hover {
+    background: transparent;
+    color: #F4A460;
+}
+
+.navbar-nav>.active>a {
+    color: #F4A460 !important;
+}
+
+.main-nav .navbar-right {
+    margin-right: 0;
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    04. Hero CSS 
+---///---///---///---///---///---///---///---///---///---*/
+
+.hero-sec {
+    overflow: hidden;
+}
+
+#jarallax-container-0 {
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.hero-sec .layer-black {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#particles-js {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/bg/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-family: 'Eagle Lake', cursive;
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.hero-content h1 b {
+    color: #F4A460;
+}
+
+.cd-headline.clip .cd-words-wrapper::after {
+    background-color: #F4A460;
+}
+
+.hero-content p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 26px;
+    letter-spacing: 10px;
+    text-transform: capitalize;
+}
+
+.hero-sec-two {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+}
+
+.hero-sec-two .layer-black {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    05. About CSS
+---///---///---///---///---///---///---///---///---///---*/
+
+.about-sec {
+    overflow-x: hidden;
+}
+
+.about-sec .about-box {
+    padding: 25px 20px;
+    background: #f7f7f7;
+    border-top: 3px solid #F4A460;
+    margin-bottom: 25px;
+}
+
+.about-sec .about-box h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.about-sec .about-box h3 span {
+    font-size: 32px;
+    color: #F4A460;
+}
+
+.info-list ul li {
+    text-transform:lowercase;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.info-list ul li a {
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #F4A460;
+}
+
+.info-list ul li a:hover {
+    color: #111111;
+}
+
+.ratings-start i {
+    color: #F4A460;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    06. Skill CSS
+---///---///---///---///---///---///---///---///---///---*/
+
+.skill-sec {
+    background: #F7F7F7;
+    overflow-x: hidden;
+}
+
+.skill-sec h3 {
+    margin-bottom: 20px;
+}
+
+.skill-sec h3 span {
+    color: #F4A460;
+}
+
+.skill-sec p {
+    margin-bottom: 30px;
+}
+
+.skill-sec .panel-group .panel {
+    border-radius: 0;
+}
+
+.skill-sec .panel-heading {
+    border-radius: 0;
+}
+
+.skill-sec .panel-default>.panel-heading {
+    background: #ffffff;
+}
+
+.skill-sec .panel-heading .panel-title {
+    font-weight: normal;
+}
+
+.skill-item span{
+    font-size: 20px;
+}
+
+.skill-item .progress {
+    border-radius: 0;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.skill-item .progress-bar-success {
+    background: #111111;
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    07. Service CSS
+---///---///---///---///---///---///---///---///---///---*/
+
+.service-sec {
+    background: #ffffff;
+}
+
+.service-box {
+    background: #F7F7F7;
+    position: relative;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 3px solid #d0d0d0;
+    overflow: hidden;
+    -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-box:hover {
+    border-color: #F4A460;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.top-arrow {
+    position: absolute;
+    left: 50%;
+    top: -100%;
+    margin-left: -15px;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid #F4A460;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.service-box:hover .top-arrow {
+    top: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-box i {
+    font-size: 50px;
+    line-height: 65px;
+    color: #F4A460;
+}
+
+.service-box h4 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    08. Counter CSS
+---///---///---///---///---///---///---///---///---///---*/
+
+.counter-sec {
+    padding: 0px 0 70px;
+    background: #F7F7F7;
+}
+
+.counter-sec .counter-box {
+    text-align: center;
+    padding: 30px 20px;
+    background: #ffffff;
+    color: #111111;
+    border-top: 3px solid #F4A460;
+    -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.counter-sec .counter-box:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.counter-sec .counter-box .counter {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.counter-sec .counter-box p {
+    text-transform: capitalize;
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    09. Portfolio CSS
+---///---///---///---///---///---///---///---///---///---*/
+
+.portfolio-sec.section-default {
+    padding: 120px 0;
+    overflow-x: hidden;
+}
+
+#filters {
+    margin-bottom: 40px;
+}
+
+#filters a {
+    padding-bottom: 10px;
+    color: #676767;
+}
+
+#filters a:hover,
+#filters a.active {
+    color: #F4A460;
+}
+
+#sortlist li {
+    width: 24.986%;
+    height: auto;
+}
+
+/* Item Hover CSS */
+
+.hover-me img{
+    object-fit: fill;
+    width: 100%;
+    height: 30rem;
+}
+.hover-me {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hover-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hover-me:hover .hover-layer {
+    bottom: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hover-me-content {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: 111;
+    margin-top: -25px;
+}
+
+.hover-me-content a i {
+    color: #F4A460;
+    font-size: 32px;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hover-me:hover .hover-me-content a i {
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hover-me-content p a {
+    color: #ffffff;
+    text-transform: capitalize;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hover-me:hover .hover-me-content p a {
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hover-me .thumbnail {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+    background: transparent;
+    display: inline-block;
+}
+
+/* Featherlight CSS */
+
+.featherlight .featherlight-content {
+    padding: 10px;
+    border-bottom: none;
+}
+
+.featherlight-next span {
+    right: -2%;
+}
+
+.featherlight-previous {
+    right: 88%;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    background: transparent;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.featherlight-next {
+    left: 88%;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: transparent;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.featherlight-next:hover,
+.featherlight-previous:hover {
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.featherlight-next span,
+.featherlight-previous span {
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.featherlight .featherlight-close-icon {
+    background: #000000;
+    color: #ffffff;
+    right: 20px;
+    top: 20px;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    padding: 0 5px;
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    10. Testimonial CSS
+---///---///---///---///---///---///---///---///---///---*/
+
+.testimonial-sec {
+    padding: 120px 0 90px;
+    background: url(../images/bg/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-align: center;
+    position: relative;
+}
+
+.slick-slide {
+    outline: none;
+}
+
+.slick-dots li {
+    margin: 0 2px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+}
+
+.testimonial-box {
+    padding: 40px 40px;
+    background: #ffffff;
+    text-align: center;
+    border: 1px solid #dddddd;
+    border-top: 3px solid #F4A460;
+}
+
+.testimonial-box img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+
+.testimonial-box h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.testimonial-box span {
+    color: #F4A460;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.testimonial-box p {
+    margin-top: 10px;
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    11. Contact CSS
+---///---///---///---///---///---///---///---///---///---*/
+
+.contact-sec {
+    padding: 120px 0 90px;
+    overflow: hidden;
+}
+
+.contact-sec h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.contact-sec h2 span {
+    color: #F4A460;
+}
+
+.contact-box {
+    background: #f7f7f7;
+    padding: 30px 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-top: 3px solid #F4A460;
+    -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-box:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-box i {
+    font-size: 40px;
+    color: #F4A460;
+    margin-bottom: 10px;
+}
+
+.contact-box address {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+.contact-sec form .form-control {
+    height: 45px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    border-bottom: 1px solid #dddddd;
+    color: #676767;
+    padding-left: 0;
+}
+
+.contact-sec form .textarea-hight-full {
+    height: 100%;
+}
+
+/*---///---///---///---///---///---///---///---///---///---
+    12. Footer CSS
+---///---///---///---///---///---///---///---///---///---*/
+
+.main-footer {
+    padding: 100px 0;
+    background: url(../images/bg/footer.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-footer .footer-col {
+    text-align: center;
+}
+
+.main-footer .footer-col a i {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #dddddd;
+    color: #F4A460;
+    font-size: 20px;
+    line-height: 50px;
+    border-top: 1px solid #F4A460;
+    margin: 0 2px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.main-footer .footer-col a i:hover {
+    color: #333333;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Copyright CSS */
+
+.copyright {
+    padding: 20px 0;
+    background-color: #dddddd;
+    text-align: center;
+}
+
+.copyright p {
+    color: #777777;
+}
+
+.copyright p a {
+    color: #333333;
+}
+
+/* Demo List Page Css */
+
+.main-demo-heading {
+    padding: 150px 0;
+    background: url(../demo-image/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-demo-heading h1 {
+    color: #F4A460;
+    font-size: 70px;
+}
+
+.main-demo-heading h2 {
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+
+.buy-btn {
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #ffffff;
+    padding: 10px 30px;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+.buy-btn:hover {
+    background: #F4A460;
+    color: #ffffff;
+    border-color: #F4A460;
+}
+
+.demo-list-page {
+    padding: 150px 0 100px;
+    text-align: center;
+}
+
+.demo-list-page h3 {
+    font-size: 24px;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+.demo-list-page h3 a {
+    color: #111111;
+}
+
+.demo-list-page h5 {
+    margin-bottom: 80px;
+    color: #F4A460;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.demo-list-page h1 {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.demo-list-page p {
+    font-size: 14px;
+}
+
+.demo-list-page p a {
+    color: #111111;
+    text-transform: capitalize;
+}
+
+.demo-box {
+    margin-bottom: 40px;
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    -webkit-box-shadow: -2px 3px 35px -5px rgba(74, 74, 74, 1);
+    -moz-box-shadow: -2px 3px 35px -5px rgba(74, 74, 74, 1);
+    box-shadow: -2px 3px 35px -5px rgba(74, 74, 74, 1);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.demo-box:hover {
+    box-shadow: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.demo-over-layer {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.demo-box:hover .demo-over-layer {
+    bottom: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.demo-over-layer h4 a {
+    position: absolute;
+    color: #ffffff;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.more-demo-link p {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+    display: inline-block;
+}

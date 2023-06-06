@@ -1,0 +1,66 @@
+/* Filters */
+
+#filters {
+    text-align: center;
+    color: #ccc;
+    font-size: 15px;
+    padding: 15px 0 0 0;
+}
+
+#filters a {
+    color: #373A3C;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#filters a:first-child {}
+
+#filters a:hover,
+#filters a.active {
+    color: #d37070;
+}
+
+/* Sortlist */
+
+#sortlist {
+    padding: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#sortlist li {
+    position: absolute;
+    width: 25%;
+    height: auto;
+    text-align: center;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#sortlist>li:hover {
+    color: #D17E7E;
+}
+
+#sortlist li:nth-child(-2n+8),
+#sortlist li:nth-child(8)~li:nth-child(-2n+15),
+#sortlist li:nth-child(16)~li:nth-child(-2n+24),
+#sortlist li:nth-child(24)~li:nth-child(-2n+31),
+#sortlist li:nth-child(32)~li:nth-child(-2n+40),
+#sortlist li:nth-child(40)~li:nth-child(-2n+47),
+#sortlist li:nth-child(48)~li:nth-child(-2n+56),
+#sortlist li:nth-child(56)~li:nth-child(-2n+63) {
+    background-color: white;
+}
